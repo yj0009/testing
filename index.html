@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commercial Landscape Australia | Landscape Design, Construction & Maintenance — Melbourne</title>
+<meta name="description" content="Commercial Landscape Australia delivers professional landscape design, construction and maintenance for education, aged care, residential and commercial property sites across Melbourne Metro.">
+<meta name="keywords" content="commercial landscaping Melbourne, landscape design Melbourne, landscape construction Melbourne, landscape maintenance Melbourne, school landscaping, aged care landscaping, residential landscaping Melbourne">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F2A20;
+  --cream:#F6F4EF;
+  --sage:#6B7F5E;
+  --orange:#E2691E;
+  --stone:#E8E4DB;
+  --text:#2B2B26;
+  --line:rgba(31,42,32,0.11);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.label{font-family:'Montserrat',sans-serif;}
+.label{font-size:0.74rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+button{font-family:'Inter',sans-serif;}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;}
+
+/* ---- ANIMATIONS ---- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.75s cubic-bezier(.22,1,.36,1),transform 0.75s cubic-bezier(.22,1,.36,1);}
+.reveal.visible{opacity:1;transform:none;}
+.stagger>*{opacity:0;transform:translateY(22px);transition:opacity 0.6s cubic-bezier(.22,1,.36,1),transform 0.6s cubic-bezier(.22,1,.36,1);}
+.stagger.visible>*{opacity:1;transform:none;}
+.stagger.visible>*:nth-child(1){transition-delay:.05s;}
+.stagger.visible>*:nth-child(2){transition-delay:.13s;}
+.stagger.visible>*:nth-child(3){transition-delay:.21s;}
+.stagger.visible>*:nth-child(4){transition-delay:.29s;}
+.stagger.visible>*:nth-child(5){transition-delay:.37s;}
+.stagger.visible>*:nth-child(6){transition-delay:.45s;}
+@media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1!important;transform:none!important;transition:none!important;}}
+
+/* ---- HEADER ---- */
+header{position:sticky;top:0;z-index:100;background:rgba(246,244,239,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:0 32px;height:66px;}
+.logo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;letter-spacing:0.01em;color:var(--ink);}
+.logo em{font-style:normal;color:var(--sage);}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-size:0.9rem;font-weight:500;color:var(--ink);transition:color .2s;}
+.nav-links a:hover{color:var(--sage);}
+.btn-call{background:var(--orange);color:#fff;font-weight:700;font-size:0.85rem;padding:10px 20px;border-radius:4px;border:none;cursor:pointer;letter-spacing:0.02em;transition:background .2s,transform .15s;}
+.btn-call:hover{background:#c8581a;transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{width:23px;height:2px;background:var(--ink);display:block;transition:transform .25s, opacity .25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;flex-direction:column;background:var(--cream);border-top:1px solid var(--line);padding:4px 0 16px;}
+.mobile-menu a{padding:13px 32px;font-size:0.95rem;font-weight:500;border-bottom:1px solid var(--line);}
+.mobile-menu.open{display:flex;}
+@media(max-width:860px){.nav-links{display:none;}.hamburger{display:flex;}}
+
+/* ---- HERO ---- */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:var(--cream);}
+.hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;max-width:var(--maxw);margin:0 auto;padding:52px 32px 80px;position:relative;z-index:2;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--orange);margin-bottom:18px;}
+.hero-badge span{width:28px;height:1.5px;background:var(--orange);}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.5rem);font-weight:900;line-height:1.1;letter-spacing:-.015em;margin-bottom:20px;}
+.hero h1 em{font-style:normal;color:var(--orange);}
+.hero-sub{font-size:1rem;color:rgba(246,244,239,.72);max-width:440px;margin-bottom:32px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-prim{background:var(--orange);color:#fff;font-weight:700;font-size:0.92rem;padding:14px 28px;border-radius:4px;border:none;cursor:pointer;transition:background .2s,transform .15s;}
+.btn-prim:hover{background:#c8581a;transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--cream);font-weight:600;font-size:0.92rem;padding:14px 28px;border-radius:4px;border:1.5px solid rgba(246,244,239,.28);cursor:pointer;transition:border-color .2s,background .2s;}
+.btn-ghost:hover{border-color:var(--cream);background:rgba(246,244,239,.06);}
+.hero-img{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;}
+.hero-img img{width:100%;height:100%;object-fit:cover;}
+.hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(175deg,rgba(31,42,32,0) 55%,rgba(31,42,32,.6) 100%);}
+.hero-tag{position:absolute;bottom:18px;left:18px;z-index:2;color:#fff;font-size:0.8rem;font-weight:600;background:rgba(31,42,32,.5);padding:7px 13px;border-radius:4px;backdrop-filter:blur(6px);}
+.hero-contour{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr;padding:44px 24px 60px;gap:36px;}.hero-img{order:-1;aspect-ratio:16/9;}}
+
+/* ---- SECTION BASE ---- */
+section{padding:88px 0;}
+.sec-head{margin-bottom:52px;}
+.sec-head .label{display:block;margin-bottom:12px;}
+.sec-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;line-height:1.18;color:var(--ink);}
+.sec-head p{margin-top:12px;font-size:.96rem;color:#5a5a52;max-width:520px;}
+
+/* ---- INDUSTRIES ---- */
+.industries{background:var(--cream);}
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);}
+.ind-card{padding:36px 26px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px;transition:background .22s;}
+.ind-card:last-child{border-right:none;}
+.ind-card:hover{background:#eeeae0;}
+.ind-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:0.72rem;letter-spacing:.18em;color:var(--orange);}
+.ind-card h3{font-size:1.08rem;font-weight:700;color:var(--ink);}
+.ind-card p{font-size:0.87rem;color:#6a6a60;line-height:1.6;}
+@media(max-width:860px){.ind-grid{grid-template-columns:repeat(2,1fr);}.ind-card:nth-child(2){border-right:none;}.ind-card:nth-child(1),.ind-card:nth-child(2){border-bottom:1px solid var(--line);}}
+@media(max-width:500px){.ind-grid{grid-template-columns:1fr;}.ind-card{border-right:none;border-bottom:1px solid var(--line);}.ind-card:last-child{border-bottom:none;}}
+
+/* ---- ABOUT ---- */
+.about{background:var(--stone);position:relative;overflow:hidden;}
+.about-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center;position:relative;z-index:2;}
+.about-img{border-radius:6px;overflow:hidden;aspect-ratio:4/5;}
+.about-img img{width:100%;height:100%;object-fit:cover;}
+.about-content .label{margin-bottom:12px;display:block;}
+.about-content h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:800;line-height:1.18;color:var(--ink);margin-bottom:16px;}
+.about-content p{color:#55554d;margin-bottom:14px;font-size:.95rem;}
+.about-checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:18px 0 28px;}
+.about-checks li{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--text);}
+.about-checks svg{flex-shrink:0;width:16px;height:16px;margin-top:2px;stroke:var(--sage);stroke-width:2.5;fill:none;}
+.about-stats{display:flex;gap:28px;padding-top:20px;border-top:1px solid rgba(31,42,32,.12);}
+.about-stats div{display:flex;flex-direction:column;}
+.about-stats strong{font-family:'Montserrat',sans-serif;font-size:1.85rem;font-weight:800;color:var(--ink);}
+.about-stats span{font-size:.8rem;color:#6a6a60;}
+@media(max-width:860px){.about-inner{grid-template-columns:1fr;gap:36px;}.about-img{order:-1;aspect-ratio:16/9;}}
+
+/* ---- SERVICES ---- */
+.services{background:var(--cream);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:36px 30px;display:flex;flex-direction:column;gap:0;transition:border-color .25s,transform .25s,box-shadow .25s;}
+.svc-card:hover{border-color:var(--sage);transform:translateY(-4px);box-shadow:0 16px 36px -20px rgba(31,42,32,.28);}
+.svc-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.7rem;letter-spacing:.18em;color:var(--orange);display:block;margin-bottom:16px;}
+.svc-card h3{font-size:1.18rem;font-weight:800;color:var(--ink);margin-bottom:10px;}
+.svc-card>p{font-size:.9rem;color:#6a6a60;margin-bottom:22px;flex:1;}
+.svc-divider{height:1px;background:var(--line);margin-bottom:20px;}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.svc-list li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--text);}
+.svc-list svg{flex-shrink:0;width:15px;height:15px;stroke:var(--sage);stroke-width:2.5;fill:none;margin-top:3px;}
+@media(max-width:860px){.svc-grid{grid-template-columns:1fr;}}
+
+/* ---- WHY ---- */
+.why{background:var(--ink);color:var(--cream);position:relative;overflow:hidden;}
+.why .sec-head h2{color:var(--cream);}
+.why .sec-head p{color:rgba(246,244,239,.6);}
+.why .label{color:var(--orange);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 48px;position:relative;z-index:2;}
+.why-item{display:flex;gap:16px;align-items:flex-start;}
+.why-icon{flex-shrink:0;width:40px;height:40px;border:1px solid rgba(246,244,239,.18);border-radius:4px;display:flex;align-items:center;justify-content:center;}
+.why-icon svg{width:19px;height:19px;stroke:var(--orange);stroke-width:2;fill:none;}
+.why-item h3{font-size:.98rem;font-weight:700;margin-bottom:4px;font-family:'Montserrat',sans-serif;}
+.why-item p{font-size:.86rem;color:rgba(246,244,239,.58);}
+@media(max-width:860px){.why-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.why-grid{grid-template-columns:1fr;}}
+
+/* ---- PROCESS ---- */
+.process{background:var(--cream);}
+.proc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.proc-row::before{content:'';position:absolute;top:23px;left:24px;right:24px;height:1.5px;background:var(--line);z-index:0;}
+.proc-item{position:relative;z-index:1;padding-right:24px;}
+.proc-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.82rem;letter-spacing:.05em;color:#fff;background:var(--sage);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.proc-item h3{font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:7px;}
+.proc-item p{font-size:.87rem;color:#6a6a60;}
+@media(max-width:860px){.proc-row{grid-template-columns:1fr 1fr;gap:40px 0;}.proc-row::before{display:none;}}
+@media(max-width:500px){.proc-row{grid-template-columns:1fr;gap:32px;}}
+
+/* ---- PROJECTS ---- */
+.projects{background:var(--stone);}
+.proj-filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px;}
+.proj-filter{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 17px;border:1.5px solid var(--ink);border-radius:30px;background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s;}
+.proj-filter:hover,.proj-filter.active{background:var(--ink);color:var(--cream);}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.proj-card{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;}
+.proj-card img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease;}
+.proj-card:hover img{transform:scale(1.07);}
+.proj-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,42,32,0) 42%,rgba(31,42,32,.8) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;color:#fff;}
+.proj-overlay .label{color:var(--orange);margin-bottom:4px;}
+.proj-overlay h3{font-size:1rem;font-weight:700;font-family:'Montserrat',sans-serif;}
+.proj-card.hidden{display:none;}
+@media(max-width:860px){.proj-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:500px){.proj-grid{grid-template-columns:1fr;}}
+
+/* ---- REVIEWS ---- */
+.reviews{background:var(--cream);}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.review-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:16px;transition:transform .25s,box-shadow .25s;}
+.review-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px -18px rgba(31,42,32,.28);}
+.review-stars{display:flex;gap:3px;}
+.review-stars svg{width:15px;height:15px;fill:var(--orange);}
+.review-text{font-size:.91rem;color:var(--text);font-style:italic;}
+.review-author{margin-top:auto;}
+.review-author strong{display:block;font-family:'Montserrat',sans-serif;font-size:.9rem;color:var(--ink);}
+.review-author span{font-size:.8rem;color:#6a6a60;}
+@media(max-width:860px){.review-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.review-grid{grid-template-columns:1fr;}}
+
+/* ---- FAQ ---- */
+.faq{background:var(--stone);}
+.faq-list{display:flex;flex-direction:column;gap:12px;max-width:780px;}
+details.faq-item{border:1px solid var(--line);border-radius:6px;background:var(--cream);overflow:hidden;transition:border-color .2s;}
+details.faq-item[open]{border-color:var(--sage);}
+details.faq-item summary{list-style:none;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;color:var(--ink);cursor:pointer;}
+details.faq-item summary::-webkit-details-marker{display:none;}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;border:1.5px solid var(--line);position:relative;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;}
+.faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--ink);transition:transform .22s,background .2s;}
+.faq-icon::before{width:10px;height:1.5px;}
+.faq-icon::after{width:1.5px;height:10px;}
+details.faq-item[open] .faq-icon{background:var(--orange);border-color:var(--orange);}
+details.faq-item[open] .faq-icon::before,details.faq-item[open] .faq-icon::after{background:#fff;}
+details.faq-item[open] .faq-icon::after{transform:scaleY(0);}
+.faq-answer{padding:0 22px 18px;font-size:.91rem;color:#55554d;max-width:640px;}
+
+/* ---- CTA / CONTACT ---- */
+.cta{background:var(--ink);color:var(--cream);position:relative;overflow:hidden;}
+.cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:2;}
+.cta .label{color:var(--orange);}
+.cta h2{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:800;line-height:1.18;margin:12px 0 14px;}
+.cta>div>p{color:rgba(246,244,239,.65);font-size:.95rem;margin-bottom:0;}
+.contact-rows{display:flex;flex-direction:column;gap:12px;margin-top:28px;}
+.contact-row{display:flex;align-items:center;gap:14px;color:var(--cream);}
+.c-icon{width:38px;height:38px;border-radius:50%;background:rgba(246,244,239,.07);border:1px solid rgba(246,244,239,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,border-color .2s;}
+.contact-row a:hover .c-icon{background:var(--orange);border-color:var(--orange);}
+.c-icon svg{width:17px;height:17px;}
+.contact-label{font-size:.8rem;color:rgba(246,244,239,.5);display:block;line-height:1;}
+.contact-val{font-size:.93rem;font-weight:600;color:var(--cream);}
+.cta-form-box{background:var(--cream);border-radius:8px;padding:34px;color:var(--text);}
+.cta-form-box h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.08rem;margin-bottom:22px;color:var(--ink);}
+.field{margin-bottom:16px;}
+.field label{display:block;font-size:.78rem;font-weight:700;letter-spacing:.05em;color:var(--ink);margin-bottom:6px;}
+.field input,.field textarea,.field select{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:4px;font-family:'Inter',sans-serif;font-size:.91rem;color:var(--text);background:#fff;transition:border-color .2s;}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--sage);outline:none;}
+.field textarea{resize:vertical;}
+.cta-form-box .btn-prim{width:100%;padding:14px;font-size:.93rem;}
+@media(max-width:860px){.cta-inner{grid-template-columns:1fr;gap:40px;}}
+
+/* ---- FOOTER ---- */
+footer{background:#14201A;color:rgba(246,244,239,.65);padding:64px 0 28px;}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:52px;}
+.foot-logo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.08rem;color:var(--cream);margin-bottom:12px;}
+.foot-logo em{font-style:normal;color:var(--sage);}
+.foot-desc{font-size:.86rem;line-height:1.7;}
+.foot-social{display:flex;gap:10px;margin-top:18px;}
+.foot-social a{width:34px;height:34px;border-radius:50%;border:1px solid rgba(246,244,239,.15);display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;}
+.foot-social a:hover{background:var(--orange);border-color:var(--orange);}
+.foot-social svg{width:15px;height:15px;}
+.foot-col h4{font-family:'Montserrat',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);margin-bottom:16px;}
+.foot-col a{display:block;font-size:.86rem;margin-bottom:10px;transition:color .2s;}
+.foot-col a:hover{color:var(--orange);}
+.foot-bottom{border-top:1px solid rgba(246,244,239,.09);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.78rem;color:rgba(246,244,239,.38);}
+.foot-bottom-links{display:flex;gap:16px;}
+.foot-bottom-links a{color:rgba(246,244,239,.38);transition:color .2s;font-size:.78rem;}
+.foot-bottom-links a:hover{color:var(--orange);}
+@media(max-width:860px){.foot-top{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.foot-top{grid-template-columns:1fr;}}
+
+/* ---- PRIVACY / FAQ OVERLAY ---- */
+.overlay-backdrop{position:fixed;inset:0;background:rgba(20,32,26,.55);backdrop-filter:blur(4px);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;}
+.overlay-backdrop.open{display:flex;}
+.overlay-panel{background:var(--cream);border-radius:8px;max-width:680px;width:100%;max-height:88vh;overflow-y:auto;position:relative;box-shadow:0 32px 80px -20px rgba(20,32,26,.55);}
+.overlay-header{position:sticky;top:0;background:var(--cream);padding:26px 32px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;z-index:2;}
+.overlay-header h2{font-size:1.2rem;font-weight:800;color:var(--ink);}
+.overlay-close{background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--ink);line-height:1;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.overlay-close:hover{background:var(--line);}
+.overlay-body{padding:28px 32px 36px;}
+.overlay-body h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);margin:22px 0 8px;}
+.overlay-body h3:first-child{margin-top:0;}
+.overlay-body p{font-size:.91rem;color:#55554d;margin-bottom:10px;}
+</style>
+</head>
+<body>
+
+<!-- PRIVACY OVERLAY -->
+<div class="overlay-backdrop" id="privacyOverlay" role="dialog" aria-modal="true" aria-label="Privacy Policy">
+  <div class="overlay-panel">
+    <div class="overlay-header">
+      <h2>Privacy Policy</h2>
+      <button class="overlay-close" onclick="closeOverlay('privacyOverlay')" aria-label="Close">&#x2715;</button>
+    </div>
+    <div class="overlay-body">
+      <h3>Information We Collect</h3>
+      <p>When you contact us or submit a quote request, we collect your name, phone number and any project details you provide. We may also collect information through cookies when you visit this website.</p>
+      <h3>How We Use Your Information</h3>
+      <p>We use your information solely to respond to your enquiry and provide landscaping services. We do not sell or share your personal information with third parties for marketing purposes.</p>
+      <h3>Contact Information</h3>
+      <p>We store contact details you provide so we can follow up on your enquiry and manage our working relationship. This information is held securely and is only accessible to our team.</p>
+      <h3>Cookies</h3>
+      <p>This website may use basic cookies to improve your browsing experience. No personal data is collected through cookies without your knowledge.</p>
+      <h3>Your Rights</h3>
+      <p>You may request access to, correction of, or deletion of any personal information we hold about you at any time. Contact us on +61 456 396 193 to make a request.</p>
+      <h3>Updates to This Policy</h3>
+      <p>This policy may be updated from time to time. The current version is always available on this page. Last updated: June 2026.</p>
+      <h3>Contact Us</h3>
+      <p>For any privacy-related questions, contact us directly on +61 456 396 193 or via WhatsApp.</p>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <nav>
+    <a href="#" class="logo">COMMERCIAL <em>LANDSCAPE</em> AU</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+61456396193"><button class="btn-call">&#128222; Call Now</button></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+61456396193" style="font-weight:700;color:var(--orange);">Call — +61 456 396 193</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="hero-contour" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-50,620 C150,560 350,680 600,600 C850,520 1000,650 1250,580" stroke="rgba(246,244,239,.05)" stroke-width="1" fill="none"/>
+    <path d="M-50,550 C200,490 400,600 650,530 C880,470 1050,575 1250,510" stroke="rgba(246,244,239,.04)" stroke-width="1" fill="none"/>
+    <path d="M-50,490 C220,430 430,530 680,470 C900,420 1080,510 1250,450" stroke="rgba(246,244,239,.03)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="reveal">
+      <div class="hero-badge"><span></span>Melbourne Metro Landscaping</div>
+      <h1>Landscape Design, Construction <em>&amp;</em> Maintenance</h1>
+      <p class="hero-sub">We design, build and maintain outdoor spaces for education, aged care, residential and commercial property sites across Melbourne.</p>
+      <div class="hero-btns">
+        <a href="#contact"><button class="btn-prim">Request a Quote</button></a>
+        <a href="#projects"><button class="btn-ghost">View Projects</button></a>
+      </div>
+    </div>
+    <div class="hero-img reveal">
+      <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1000&auto=format&fit=crop" alt="Professionally landscaped commercial grounds with paving and garden beds">
+      <span class="hero-tag">Melbourne Metro — Active Projects</span>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Who We Serve</span>
+      <h2>Industries we work with</h2>
+      <p>We work across four sectors — each with its own brief, compliance requirements and day-to-day expectations. Here's what that looks like in practice.</p>
+    </div>
+    <div class="ind-grid stagger">
+      <div class="ind-card">
+        <span class="ind-num">01</span>
+        <h3>Education</h3>
+        <p>Schools, childcare centres and campuses. Grounds that are safe, resilient and low-maintenance during term time — turf, shade planting and hardy garden beds built to handle daily use.</p>
+      </div>
+      <div class="ind-card">
+        <span class="ind-num">02</span>
+        <h3>Aged Care</h3>
+        <p>Residential aged care facilities and retirement villages. Accessible paths, calm garden areas and low-maintenance planting designed with resident safety and easy upkeep in mind.</p>
+      </div>
+      <div class="ind-card">
+        <span class="ind-num">03</span>
+        <h3>Residential</h3>
+        <p>Private homes and multi-residential developments. Garden design, construction and regular maintenance — managed from concept through to the ongoing care of the site.</p>
+      </div>
+      <div class="ind-card">
+        <span class="ind-num">04</span>
+        <h3>Commercial Property</h3>
+        <p>Offices, retail centres and industrial properties. Tidy, professional grounds that make a strong first impression and are kept that way on a regular maintenance schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <svg class="hero-contour" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-50,80 C200,140 400,40 650,100 C880,150 1050,60 1250,120" stroke="rgba(31,42,32,.05)" stroke-width="1" fill="none"/>
+    <path d="M-50,40 C220,100 430,10 680,70 C900,120 1080,30 1250,80" stroke="rgba(31,42,32,.04)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="wrap">
+    <div class="about-inner">
+      <div class="about-img reveal">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=900&auto=format&fit=crop" alt="Landscaping crew working on garden beds and turf installation">
+      </div>
+      <div class="reveal">
+        <span class="label">About Us</span>
+        <h2>Built on experience, delivered on time</h2>
+        <p>Commercial Landscape Australia is a Melbourne-based landscaping contractor. We handle landscape design, construction and maintenance for education, aged care, residential and commercial property sites — taking on projects of any size, from a single garden refresh to a full grounds build.</p>
+        <p>Every project is handled by our own crew from start to finish. The team that designs the space is connected to the team that builds it, and the team that keeps it looking good long after handover. No subcontractor hand-offs, no lost details — one contractor, accountable for the whole job.</p>
+        <p>We work with property managers, builders, school operations teams and facility operators who need a landscaping contractor that turns up on time, communicates clearly and stands behind the quality of their work.</p>
+        <ul class="about-checks">
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Fully insured crews</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Clear written quotes</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Direct phone &amp; WhatsApp contact</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Flexible maintenance schedules</li>
+        </ul>
+        <div class="about-stats">
+          <div><strong>150+</strong><span>Projects completed</span></div>
+          <div><strong>4</strong><span>Sectors served</span></div>
+          <div><strong>Melb</strong><span>Metro coverage</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">What We Do</span>
+      <h2>Our services</h2>
+      <p>Three core services, applied across all the sectors we work in. The same crew handles each phase — design, build and ongoing maintenance.</p>
+    </div>
+    <div class="svc-grid stagger">
+      <div class="svc-card">
+        <span class="svc-num">01 — DESIGN</span>
+        <h3>Landscape Design</h3>
+        <p class="">We start with a site visit and a clear brief, then develop a design that fits the budget, the site and the people who use it — practical plans ready for sign-off and build.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-list">
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Site assessment &amp; design brief</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Concept &amp; detailed plans</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Planting &amp; softscape layouts</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Paving, walls &amp; hard surface design</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Irrigation &amp; drainage layout</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">02 — CONSTRUCTION</span>
+        <h3>Landscape Construction</h3>
+        <p>Once a design is locked in, our crews build it — coordinating all materials and sequencing on site so the job finishes on time and to spec.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-list">
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Turf supply &amp; installation</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Garden bed &amp; planting installation</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Paving, paths &amp; hard surfaces</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Retaining walls</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Irrigation system installation</li>
+        </ul>
+      </div>
+      <div class="svc-card">
+        <span class="svc-num">03 — MAINTENANCE</span>
+        <h3>Landscape Maintenance</h3>
+        <p>Ongoing grounds care on a schedule that suits the site — keeping it looking presentable, safe and healthy through every season without fuss.</p>
+        <div class="svc-divider"></div>
+        <ul class="svc-list">
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mowing, edging &amp; lawn care</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Pruning, weeding &amp; garden upkeep</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Irrigation checks &amp; adjustments</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Seasonal clean-ups</li>
+          <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Regular site reports</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <svg class="hero-contour" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-50,420 C200,360 400,460 650,400 C880,350 1050,440 1250,390" stroke="rgba(246,244,239,.04)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Why Choose Us</span>
+      <h2>A team that delivers</h2>
+      <p>What sets us apart from other landscapers — from the first quote to the final handover.</p>
+    </div>
+    <div class="why-grid stagger">
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><h3>Experienced Crews</h3><p>Our people have years of hands-on landscaping experience across all the sectors we serve.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div><h3>Qualified Team</h3><p>Trained and ticketed staff for every part of the job — design, construction and maintenance.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><h3>Safety Focused</h3><p>Safe work practices on every site — especially important in education and aged care environments.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><h3>On-Time Delivery</h3><p>We plan projects properly so deadlines are met — and we communicate early if anything changes.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div><h3>Quality Materials</h3><p>We source durable, appropriate materials — what goes in will last and look good long-term.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div><h3>End-to-End Service</h3><p>One contractor for design, construction and maintenance — no hand-offs or gaps in accountability.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">How It Works</span>
+      <h2>Our process</h2>
+      <p>Four steps from first conversation to a site that's maintained and running well.</p>
+    </div>
+    <div class="proc-row stagger">
+      <div class="proc-item">
+        <div class="proc-num">01</div>
+        <h3>Consultation</h3>
+        <p>We visit the site, listen to the brief, and scope the project with you before putting anything on paper.</p>
+      </div>
+      <div class="proc-item">
+        <div class="proc-num">02</div>
+        <h3>Design</h3>
+        <p>A concept and detailed design is developed, reviewed with you and signed off before construction starts.</p>
+      </div>
+      <div class="proc-item">
+        <div class="proc-num">03</div>
+        <h3>Construction</h3>
+        <p>Our crew builds the project to the approved plans, on schedule, with regular updates throughout.</p>
+      </div>
+      <div class="proc-item">
+        <div class="proc-num">04</div>
+        <h3>Maintenance</h3>
+        <p>Ongoing scheduled maintenance keeps the site looking its best through every season after handover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Our Work</span>
+      <h2>Featured projects</h2>
+      <p>A selection of recent landscaping projects across Melbourne Metro — placeholder images, real categories.</p>
+    </div>
+    <div class="proj-filters reveal">
+      <button class="proj-filter active" data-filter="all">All</button>
+      <button class="proj-filter" data-filter="education">Education</button>
+      <button class="proj-filter" data-filter="aged-care">Aged Care</button>
+      <button class="proj-filter" data-filter="residential">Residential</button>
+      <button class="proj-filter" data-filter="commercial">Commercial Property</button>
+    </div>
+    <div class="proj-grid stagger" id="projGrid">
+      <div class="proj-card" data-cat="commercial">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop" alt="Office park grounds landscaping">
+        <div class="proj-overlay"><span class="label">Commercial Property</span><h3>Office Park Grounds</h3></div>
+      </div>
+      <div class="proj-card" data-cat="education">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=800&auto=format&fit=crop" alt="School grounds upgrade with turf and garden beds">
+        <div class="proj-overlay"><span class="label">Education</span><h3>School Grounds Upgrade</h3></div>
+      </div>
+      <div class="proj-card" data-cat="aged-care">
+        <img src="https://images.unsplash.com/photo-1444492417251-9c84a5fa18e8?q=80&w=800&auto=format&fit=crop" alt="Aged care facility courtyard garden">
+        <div class="proj-overlay"><span class="label">Aged Care</span><h3>Aged Care Courtyard</h3></div>
+      </div>
+      <div class="proj-card" data-cat="residential">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" alt="Residential apartment complex courtyard landscaping">
+        <div class="proj-overlay"><span class="label">Residential</span><h3>Apartment Courtyard</h3></div>
+      </div>
+      <div class="proj-card" data-cat="commercial">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Retail centre front landscaping">
+        <div class="proj-overlay"><span class="label">Commercial Property</span><h3>Retail Centre Frontage</h3></div>
+      </div>
+      <div class="proj-card" data-cat="education">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop" alt="School campus pathway and turf installation">
+        <div class="proj-overlay"><span class="label">Education</span><h3>Campus Pathway &amp; Turf</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Client Reviews</span>
+      <h2>What our clients say</h2>
+      <p>Feedback from property managers, schools and facility operators we've worked with across Melbourne.</p>
+    </div>
+    <div class="review-grid stagger">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+        </div>
+        <p class="review-text">"The team redesigned and built our front gardens and turf area on time. Communication was clear throughout and the result looks great."</p>
+        <div class="review-author"><strong>Sarah M.</strong><span>Facility Manager — Commercial Property</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+        </div>
+        <p class="review-text">"We've had them on a maintenance schedule for our school for over a year. Reliable, tidy, and easy to deal with every single visit."</p>
+        <div class="review-author"><strong>David T.</strong><span>Operations Manager — Education</span></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.168L12 19.771l-7.334 3.388 1.4-8.168L.132 9.211l8.2-1.193z"/></svg>
+        </div>
+        <p class="review-text">"Got a new courtyard garden and retaining wall built for our aged care facility. The crew were respectful of residents and the result is low-maintenance, just as requested."</p>
+        <div class="review-author"><strong>Linh N.</strong><span>Site Manager — Aged Care</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">FAQ</span>
+      <h2>Common questions</h2>
+      <p>Answers to questions we're often asked by clients looking for landscaping services across Melbourne.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>What areas do you service?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">We service Melbourne Metro, working on education, aged care, residential and commercial property sites throughout the region.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What landscaping services do you offer?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">We offer three core services: landscape design, landscape construction and landscape maintenance. This covers everything from turf and planting to paving, retaining walls and irrigation systems.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work on small projects or only large commercial sites?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">Both. We take on jobs of all sizes — from a single garden bed refresh or lawn care visit through to a full grounds construction and long-term maintenance contract.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can you provide ongoing maintenance after construction?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">Yes — many of our clients move straight from a design and construction project into a regular maintenance schedule. It's easier for everyone when the same crew looks after the site from start to ongoing.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get a quote?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">Call or WhatsApp us on +61 456 396 193, or fill in the request form on this page. We'll get back to you promptly to arrange a site visit and quote.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you work in schools and aged care facilities?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">Yes — education and aged care are two of our four core sectors. We understand the access, safety and compliance requirements that come with these environments and plan accordingly.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Are your crews insured?<span class="faq-icon"></span></summary>
+        <div class="faq-answer">Yes, our crews are fully insured and operate under strict on-site safety standards on every project, regardless of site type or scale.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact">
+  <svg class="hero-contour" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-50,500 C200,440 400,540 650,480 C880,430 1050,520 1250,470" stroke="rgba(246,244,239,.05)" stroke-width="1" fill="none"/>
+  </svg>
+  <div class="wrap">
+    <div class="cta-inner">
+      <div class="reveal">
+        <span class="label">Get In Touch</span>
+        <h2>Ready to start your project?</h2>
+        <p>Call us directly for a quick chat, or fill in the form and we'll come back to you with a quote.</p>
+        <div class="contact-rows">
+          <a class="contact-row" href="tel:+61456396193">
+            <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.34 1.9.63 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.29 1.85.5 2.81.63A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><span class="contact-label">Phone</span><span class="contact-val">+61 456 396 193</span></div>
+          </a>
+          <a class="contact-row" href="https://wa.me/61456396193" target="_blank" rel="noopener">
+            <div class="c-icon"><svg viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.33.21-.62.07-1.68-.84-2.78-1.5-3.89-3.4-.29-.5.29-.46.84-1.54.1-.19.05-.36-.04-.5-.1-.15-.64-1.54-.88-2.05-.23-.5-.46-.43-.64-.44-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.39 0 1.4 1.02 2.76 1.16 2.95.15.19 2.02 3.09 4.9 4.21 2.43.95 2.92.76 3.45.71.53-.05 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.68 0-3.26-.46-4.61-1.26l-.33-.19-3.07.81.82-3-.21-.34A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg></div>
+            <div><span class="contact-label">WhatsApp</span><span class="contact-val">+61 456 396 193</span></div>
+          </a>
+          <a class="contact-row" href="https://instagram.com/commercial_landscape_australia" target="_blank" rel="noopener">
+            <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+            <div><span class="contact-label">Instagram</span><span class="contact-val">@commercial_landscape_australia</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="cta-form-box reveal">
+        <h3>Request a Quote</h3>
+        <div class="field"><label for="f-name">Your name</label><input type="text" id="f-name" placeholder="e.g. James Wilson"></div>
+        <div class="field"><label for="f-phone">Phone number</label><input type="tel" id="f-phone" placeholder="+61 4XX XXX XXX"></div>
+        <div class="field"><label for="f-service">Service needed</label>
+          <select id="f-service">
+            <option>Landscape Design</option>
+            <option>Landscape Construction</option>
+            <option>Landscape Maintenance</option>
+            <option>Not sure — need advice</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-details">Project details</label><textarea id="f-details" rows="3" placeholder="Tell us about your site, what you need and your rough timeline"></textarea></div>
+        <button class="btn-prim" onclick="handleSubmit()">Send Request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo">COMMERCIAL <em>LANDSCAPE</em> AU</div>
+        <p class="foot-desc">Landscape design, construction and maintenance for education, aged care, residential and commercial property sites across Melbourne Metro.</p>
+        <div class="foot-social">
+          <a href="https://instagram.com/commercial_landscape_australia" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(246,244,239,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/61456396193" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="rgba(246,244,239,.7)" stroke="none"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.33.21-.62.07-1.68-.84-2.78-1.5-3.89-3.4-.29-.5.29-.46.84-1.54.1-.19.05-.36-.04-.5-.1-.15-.64-1.54-.88-2.05-.23-.5-.46-.43-.64-.44-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.39 0 1.4 1.02 2.76 1.16 2.95.15.19 2.02 3.09 4.9 4.21 2.43.95 2.92.76 3.45.71.53-.05 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.07-1.33A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.68 0-3.26-.46-4.61-1.26l-.33-.19-3.07.81.82-3-.21-.34A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+          </a>
+          <a href="tel:+61456396193" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(246,244,239,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.34 1.9.63 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.29 1.85.5 2.81.63A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Navigate</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Landscape Design</a>
+        <a href="#services">Landscape Construction</a>
+        <a href="#services">Landscape Maintenance</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:+61456396193">+61 456 396 193</a>
+        <a href="https://wa.me/61456396193" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="https://instagram.com/commercial_landscape_australia" target="_blank" rel="noopener">Instagram</a>
+        <span style="display:block;margin-top:6px;font-size:.84rem;">Melbourne Metro, VIC</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Commercial Landscape Australia. All rights reserved.</span>
+      <div class="foot-bottom-links">
+        <a href="#" onclick="openOverlay('privacyOverlay');return false;">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- MOBILE MENU ----
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+// ---- SCROLL REVEAL ----
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
+
+// ---- PROJECT FILTERS ----
+const filters = document.querySelectorAll('.proj-filter');
+const cards = document.querySelectorAll('.proj-card');
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    cards.forEach(c => c.classList.toggle('hidden', f !== 'all' && c.dataset.cat !== f));
+  });
+});
+
+// ---- OVERLAY ----
+function openOverlay(id){ document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeOverlay(id){ document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+document.querySelectorAll('.overlay-backdrop').forEach(el => {
+  el.addEventListener('click', e => { if(e.target === el) closeOverlay(el.id); });
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') document.querySelectorAll('.overlay-backdrop.open').forEach(el => closeOverlay(el.id));
+});
+
+// ---- FORM SUBMIT ----
+function handleSubmit(){
+  const name = document.getElementById('f-name').value.trim();
+  if(!name){ alert('Please enter your name.'); return; }
+  alert('Thanks ' + name + ' — your request has been sent. We\'ll be in touch shortly.');
+}
+</script>
+</body>
+</html>
